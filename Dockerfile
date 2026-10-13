@@ -2,7 +2,7 @@
 FROM php:8.3-cli
 
 RUN apt-get update && apt-get install -y \
-    git unzip libzip-dev libicu-dev libxml2-dev sqlite3 libsqlite3-dev \
+    git unzip libzip-dev libicu-dev libxml2-dev sqlite3 libsqlite3-dev libonig-dev \
     && docker-php-ext-install pdo_sqlite mbstring bcmath intl zip \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
